@@ -1,0 +1,17 @@
+typing
+requests
+collections
+datetime
+json
+math
+re
+numpy
+sklearn.preprocessing
+pandas
+statistics
+dateutil
+scipy.stats
+scipy.optimize
+operator
+matplotlib.pyplot
+matplotlib.cm
