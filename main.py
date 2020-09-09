@@ -35,8 +35,7 @@ def main():
     alternative, portfolio = defaultdict(dict), defaultdict(dict)
     good_accuracy = {}
     # Write here your portfolio stocks - format: [stock symbol, stock amount] - Example : [['GOOGL', 0], ['SPWR', 0]]
-    stocks = [['XLE', 55], ['XLC', 39], ['XLF', 153], ['RYAAY', 54], ['UAL',
-                                                                      163]]  # ,['GOOGL', 0], ['SPWR', 0], ['AAPL', 0],['GIS', 0], ['CRWD', 0], ['DHR', 0], ['SBUX', 0], ['SHOP', 0], ['RCL', 0], ['BA', 0], ['YNDX', 0],['TEVA', 0], ['IDCC', 0],['SOXL',21]]
+    stocks = [['XLE', 55], ['XLC', 39], ['XLF', 153], ['RYAAY', 54], ['UAL',163]] 
     portfolio, is_dev_mode = input_is_dev_mode(portfolio, stocks)
     chg, better_dict, alt_stock_data = create_stock_portfolio.calc_performance(portfolio, is_dev_mode, 7)
     new_portfolio = create_stock_portfolio.create_alternative_portfolio(better_dict, portfolio, alt_stock_data)
