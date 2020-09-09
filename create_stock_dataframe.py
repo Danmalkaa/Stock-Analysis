@@ -7,6 +7,7 @@ import statistics as stat
 from dateutil import parser
 from scipy.stats import pearsonr
 
+
 def correlate_dict(portfolio, stock, date_only_dict, up_or_down_list):
     hour_dict = {}
     for d in up_or_down_list:

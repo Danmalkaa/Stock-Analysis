@@ -72,4 +72,3 @@ def stock_hour_correlation(portfolio, stock, window=30):
     corr_dict_down = correlate_dict(portfolio, stock, date_only_dict, down_list)
     portfolio[stock]['stock_data']['hourly_correlation'] = {'up': corr_dict_up}
     portfolio[stock]['stock_data']['hourly_correlation']['down'] = corr_dict_down
-
