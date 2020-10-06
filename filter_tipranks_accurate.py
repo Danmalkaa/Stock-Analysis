@@ -9,14 +9,13 @@ def change_from_high(alt_stock_data, key, is_ptarget=False):
         current_price = \
             alt_stock_data[key]['stock_data']['1M'][sorted(alt_stock_data[key]['stock_data']['1M'].keys())[-1]][
                 'close']
-
-        if not (current_price or high_price) :
-            return 'N/A'
+    if not (current_price or high_price) :
+        return 'N/A'
+    else:
+        if not is_ptarget:
+            return (current_price / high_price - 1) * 100
         else:
-            if not is_ptarget:
-                return (current_price / high_price - 1) * 100
-            else:
-                return (high_price / current_price - 1) * 100
+            return (high_price / current_price - 1) * 100
 
 
 def create_accuracy_dict(alt_stock_data):
