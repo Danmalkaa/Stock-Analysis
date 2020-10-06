@@ -9,7 +9,7 @@ def change_from_high(alt_stock_data, key, is_ptarget=False):
         current_price = \
             alt_stock_data[key]['stock_data']['1M'][sorted(alt_stock_data[key]['stock_data']['1M'].keys())[-1]][
                 'close']
-    if not (current_price or high_price) :
+    if not current_price or not high_price:
         return 'N/A'
     else:
         if not is_ptarget:
